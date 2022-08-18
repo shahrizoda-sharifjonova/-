@@ -1,3 +1,27 @@
 mixin header()
-    header.header 
-        p header
+    header.header
+        nav.header__nav.container 
+            a(href="index.html").header__logo #[img(src="@img/logo.png", alt="" draggable="false" loading="lazy")] Имяпроекта.ру
+            .header__right
+                ul.header__list 
+                    li.header__li   
+                        a(href="#!").header__link Главная
+                    li.header__li   
+                        a(href="#!").header__link Мои заказы
+                    li.header__li   
+                        a(href="#!").header__link Сообщения
+                    li.header__li   
+                        a(href="#!").header__link Рейтинг
+                .header__content 
+                    .header__buttons 
+                        a(href="#!").header__btn Разместить заказ               
+                        a(href="#!").header__btn.header__btn_2 Кабинет исполнителя
+                    .header__icons 
+                        a(href="#!").header__icon 
+                            img(src="@img/header-user.svg", alt="")                
+                        a(href="#!").header__icon.mail 
+                            img(src="@img/header-mail.svg", alt="")                
+                        a(href="#!").header__icon 
+                            img(src="@img/header-card.svg", alt="")
+            .menu   
+                span.menu-btn                
