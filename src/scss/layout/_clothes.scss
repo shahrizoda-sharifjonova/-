@@ -1,13 +1,96 @@
 .clothes{
     padding-bottom: 100px;
+    @include media(1200){
+        padding-bottom: 70px;
+    }
+    @include media(575){
+        padding-bottom: 45px;
+    }
     &__body{
         display: flex;
         align-items: center;
         column-gap: 100px;
         justify-content: space-between;
+        @include media(1200){
+            column-gap: 45px;
+        }
+        @include media(992){
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            row-gap: 35px;
+        }
+    }
+    &__img{
+        max-width: 500px;
+        width: 100%;    
+        @include media(1200){
+            max-width: 100%;
+        }
+        img{
+            width: 100%;
+            line-height: 0;
+            object-fit: cover;
+        }
     }
     &__right{
         max-width: 580px;
+        width: 100%; 
+    }
+    &__content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 58px;
+        row-gap: 40px;
+        @include media(575){
+            column-gap: 30px;
+            row-gap: 30px;
+        }
+    }
+    &__item{
+        width: calc(50% - 29px);
+        @include media(575){
+            width: calc(50% - 15px);
+        }
+    }
+    &__num{
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 133%;
+        color: #41576B;
+        @include media(575){
+            font-size: 24px;
+            line-height: 132%;
+        }
+    }
+    &__p{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: #2E363E;
+        max-width: 210px;
         width: 100%;
+    }
+    .intro__title{
+        @include media(1200){
+            font-size: 33px;
+            line-height: 44px;
+            margin-bottom: 10px;
+        }
+        @include media(575){
+            font-size: 22px;
+            line-height: 31px;
+        }
+    }
+    .intro__desc{
+        @include media(1200){
+            font-size: 16px;
+            line-height: 141%;
+            margin-bottom: 20px;
+        }
+        @include media(575){
+            font-size: 14px;
+        }
     }
 }
