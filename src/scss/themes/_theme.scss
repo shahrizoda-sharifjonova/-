@@ -25,6 +25,9 @@ body{
     flex-direction: column;
     .main{
         flex: 1 1 auto;
+        &.partners__main{
+            background: #EFF6FD;
+        }
     }
 }
 button{
