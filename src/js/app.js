@@ -2,9 +2,14 @@ import * as functions from "./modules/functions.js";
 
 functions.isWebp();
 
-// import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination } from 'swiper';
 
-// const swiper = new Swiper();
+const swiper = new Swiper();
+
+var Swiper = new Swiper(".products__swiper", {
+  slidesPerView: 3,
+  spaceBetween: 37,
+});
 
 const menu = document.querySelector('.menu');
 const headerRight = document.querySelector('.header__right');
