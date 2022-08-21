@@ -1,0 +1,120 @@
+.messages{
+    padding-top: 32px;
+    padding-bottom:32px;
+    &__title{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+        margin-bottom: 22px;
+        @include media(575){
+            font-size: 21px;
+            line-height: 22px;
+            margin-bottom: 13px;
+        }
+    }
+    &__desc{
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 16px;
+        color: #000000;
+        margin-bottom: 40px;    
+        @include media(575){
+            margin-bottom: 27px;
+        }    
+    }
+    &__item{
+        &:not(:last-of-type){
+            margin-bottom: 24px;
+        }
+        &.right{
+            .messages__p{
+                width: 100%;
+                text-align: right;
+            }
+            .messages__row{
+                margin-left: auto;
+            }
+            .messages__content{
+                margin-left: auto;
+            }
+        }
+    }
+    &__p{
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.5px;
+        color: #000000;
+        margin-bottom: 11px;
+        @include media(575){
+            font-size: 14px;
+        }
+    }
+    &__row{
+        background: #FFFFFF;
+        border-radius: 8px;
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+        width: max-content;
+        margin-bottom: 23px;
+        @include media(575){
+            padding: 7px;
+            column-gap: 10px;
+            margin-bottom: 11px;
+        }
+    }
+    &__img{
+        @include media(575){
+            width: 40px;
+        }
+        img{
+            width: 100%;
+        }
+    }
+    &__name{
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        color: #2D2D2D;
+        margin-bottom: 6px;
+        @include media(575){
+            font-size: 13px;
+            margin-bottom: 0px;
+        }
+    }
+    &__id{
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        color: #72777B;
+        @include media(575){
+            font-size: 12px;
+        }
+    }
+    &__content{
+        background: #FFFFFF;
+        border-radius: 6px;
+        padding: 16px 18px;
+        @include media(575){
+            padding: 13px;
+        }
+    }
+    &__text{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.5px;
+        color: #000000;
+        max-width: 1050px;
+        width: 100%;
+    }
+}

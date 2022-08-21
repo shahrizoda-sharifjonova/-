@@ -915,6 +915,113 @@
   display: block;
 }
 
+.messages {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.messages__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  margin-bottom: 22px;
+}
+
+.messages__desc {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+.messages__item:not(:last-of-type) {
+  margin-bottom: 24px;
+}
+
+.messages__item.right .messages__p {
+  width: 100%;
+  text-align: right;
+}
+
+.messages__item.right .messages__row {
+  margin-left: auto;
+}
+
+.messages__item.right .messages__content {
+  margin-left: auto;
+}
+
+.messages__p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  color: #000000;
+  margin-bottom: 11px;
+}
+
+.messages__row {
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 16px;
+     -moz-column-gap: 16px;
+          column-gap: 16px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-bottom: 23px;
+}
+
+.messages__img img {
+  width: 100%;
+}
+
+.messages__name {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+  color: #2D2D2D;
+  margin-bottom: 6px;
+}
+
+.messages__id {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+  color: #72777B;
+}
+
+.messages__content {
+  background: #FFFFFF;
+  border-radius: 6px;
+  padding: 16px 18px;
+}
+
+.messages__text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.5px;
+  color: #000000;
+  max-width: 1050px;
+  width: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1563,5 +1670,44 @@ a {
 
   .partners__content {
     padding: 20px 12px;
+  }
+
+  .messages__title {
+    font-size: 21px;
+    line-height: 22px;
+    margin-bottom: 13px;
+  }
+
+  .messages__desc {
+    margin-bottom: 27px;
+  }
+
+  .messages__p {
+    font-size: 14px;
+  }
+
+  .messages__row {
+    padding: 7px;
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
+    margin-bottom: 11px;
+  }
+
+  .messages__img {
+    width: 40px;
+  }
+
+  .messages__name {
+    font-size: 13px;
+    margin-bottom: 0px;
+  }
+
+  .messages__id {
+    font-size: 12px;
+  }
+
+  .messages__content {
+    padding: 13px;
   }
 }
