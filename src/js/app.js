@@ -41,17 +41,21 @@ button.forEach(btn=>{
   btn.addEventListener('click', (e)=>{
     item.forEach(tasksItem=>{
       tasksItem.classList.remove('active')
+      itemClose.classList.remove('active')
     })
     btn.classList.toggle('active')
     btn.parentElement.classList.toggle('active')
+    itemClose.classList.toggle('active')
   })
 })
 itemClose.addEventListener('click',(e)=>{
   item.forEach(tasksItem=>{
     tasksItem.classList.remove('active')
+    itemClose.classList.remove('active')
   })
   btn.classList.remove('active')
   btn.parentElement.classList.remove('active')
+  itemClose.classList.remove('active')
 })
 
 const checkbox = document.querySelectorAll('.filter__checkboxes-input');

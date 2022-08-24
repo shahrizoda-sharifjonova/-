@@ -1,11 +1,19 @@
 .tasks{
     padding-bottom: 70px;
+    @include media(768){
+        padding-bottom: 40px;
+    }
     &__title{
         font-weight: 500;
         font-size: 24px;
         line-height: 29px;
         color: #000000;     
         margin-bottom: 22px;
+        @include media(768){
+            font-size: 19px;
+            line-height: 25px;
+            margin-bottom: 12px;
+        }
         a{
             color: #000000;     
             text-decoration: underline;
@@ -28,6 +36,12 @@
         border-radius: 8px;
         width: max-content;
         margin-bottom: 30px;
+        @include media(768){
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            padding: 10px;
+        }
     }
     &__row{
         display: flex;
@@ -37,6 +51,18 @@
         padding: 12px 80px 12px 12px;
         background: #F8F8F8;
         border-radius: 8px;
+        @include media(768){
+            width: 100%;
+            padding: 12px 20px 12px 12px;
+        }
+        &-img{
+            @include media(768){
+                width: 48px;
+            }
+            img{
+                width: 100%;
+            }
+        }
         &-title{
             font-weight: 600;
             font-size: 14px;
@@ -62,6 +88,14 @@
         border-radius: 8px;
         padding: 20px 40px 30px 17px;
         margin-bottom: 40px;
+        z-index: 3;
+        @include media(1400){
+            flex-wrap: wrap;
+        }
+        @include media(768){
+            flex-direction: column;
+            padding: 10px;
+        }
     }
     &__item{
         background: #F8F8F8;
@@ -72,12 +106,22 @@
         justify-content: space-between;
         column-gap: 75px;
         position: relative;
-        z-index: 3;
+        @include media(1400){
+            width: calc(50% - 8px);
+        }
+        @include media(768){
+            width: 100%;    
+            column-gap: 50px;
+        }
         &.active{
             .tasks__item-content{
                 opacity: 1;
                 visibility: visible;
             }
+        }
+        &-wrapper{
+            position: relative;
+            z-index: 99999999 !important;
         }
         &-left{
             display: flex;
@@ -112,7 +156,7 @@
             opacity: 0;
             visibility: hidden;
             transition: 300ms ease;
-            z-index: 3;
+            z-index: 999;
             &.active{
                 opacity: 1;
                 visibility: visible;
@@ -167,6 +211,63 @@
             }
         }
     }
+    &__form{
+        background: #FFFFFF;
+        border-radius: 8px;
+        padding: 55px 33px 28px 20px;
+        margin-bottom: 42px;
+        @include media(768){
+            padding: 20px;
+        }
+        &-row{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include media(768){
+                flex-direction: column;
+                align-items: flex-start;
+                row-gap: 12px;
+            }
+        }
+        &-right{
+            max-width: 270px;
+            width: 100%;
+            @include media(768){
+                max-width: 100%;
+            }
+        }
+    }
+    &__subtitle{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+        margin-bottom: 5px;
+        &.mb{
+            margin-bottom: 14px;
+        }
+    }
+    .filter__textarea{
+        margin-bottom: 30px;
+    }
+    &__price{
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 59px;
+        color: #000000;
+        @include media(768){
+            font-size: 24px;
+            line-height: 30px;
+            margin-bottom: 6px;
+        }
+    }
+    &__link{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 164.4%;
+        text-decoration-line: underline;
+        color: #000000;
+    }
     .close-bg{
         position: fixed;
         top: 0;
@@ -176,5 +277,11 @@
         width: 100%;
         height: 100%;
         z-index: 2;
+        opacity: 0;
+        visibility: hidden;
+        &.active{
+            opacity: 1;
+            visibility: visible;
+        }
     }
 }

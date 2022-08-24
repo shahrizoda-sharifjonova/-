@@ -205,6 +205,12 @@
                 }
             }
         }
+        &-label{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 15px;
+            color: #000000;
+        }
     }
     &__btns{
         display: flex;
