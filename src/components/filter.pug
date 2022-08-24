@@ -1,0 +1,83 @@
+mixin filter()
+    .filter 
+        .filter__body.container 
+            h2.filter__title Что хотите заказать?
+            p.filter__desc Краткое описание что можно заказать на ресурсе - В своём стремлении повысить качество жизни, они забывают, что современная методология разработки предоставляет широкие возможности для поставленных обществом задач! 
+            h2.filter__title Выберите площадку с которой связан заказ
+            .filter__row 
+                .filter__item 
+                    .filter__img 
+                        img(src="@img/filter-img.png", alt="")
+                    .filter__texts 
+                        p.filter__subtitle Площадка 1
+                        a(href="#!").filter__a Выбрать
+                .filter__item 
+                    .filter__img 
+                        img(src="@img/filter-img.png", alt="")
+                    .filter__texts 
+                        p.filter__subtitle Площадка 2
+                        a(href="#!").filter__a Выбрать
+                .filter__item 
+                    .filter__img 
+                        img(src="@img/filter-img.png", alt="")
+                    .filter__texts 
+                        p.filter__subtitle Площадка 3
+                        a(href="#!").filter__a Выбрать
+                .filter__item 
+                    .filter__img 
+                        img(src="@img/filter-img.png", alt="")
+                    .filter__texts 
+                        p.filter__subtitle Площадка 4
+                        a(href="#!").filter__a Выбрать
+            h2.filter__title Укажите задачу
+            .filter__row 
+                .filter__item 
+                    .filter__img 
+                        img(src="@img/filter-img.png", alt="")
+                    .filter__texts 
+                        p.filter__subtitle Задача 1
+                        a(href="#!").filter__a Выбрать
+                .filter__item 
+                    .filter__img 
+                        img(src="@img/filter-img.png", alt="")
+                    .filter__texts 
+                        p.filter__subtitle Задача 2
+                        a(href="#!").filter__a Выбрать
+                .filter__item 
+                    .filter__img 
+                        img(src="@img/filter-img.png", alt="")
+                    .filter__texts 
+                        p.filter__subtitle Задача 3
+                        a(href="#!").filter__a Выбрать
+                .filter__item 
+                    .filter__img 
+                        img(src="@img/filter-img.png", alt="")
+                    .filter__texts 
+                        p.filter__subtitle Задача 4
+                        a(href="#!").filter__a Выбрать
+            form(action="#").filter__form
+                p.filter__form-title Ссылка на задачу :
+                input(type="text" required).filter__input.mb 
+                p.filter__form-title Описание задачи :
+                textarea(name="textarea").filter__textarea
+                .filter__inputs 
+                    .filter__inputs-item 
+                        p.filter__form-title Цена :
+                        input(type="text" required).filter__input
+                    .filter__inputs-item 
+                        p.filter__form-title Дата сдачи:
+                        input(type="text" required).filter__input
+            p.filter__text Прекрипить xls файл списка задач:
+            .filter__files 
+                .filter__files-img 
+                    img(src="@img/filter-img-2.png", alt="")
+                .filter__files-texts 
+                    p.filter__subtitle Прикрепленные файлы
+                    a(href="#!").filter__a Открыть 
+            .filter__checkboxes 
+                input(type="checkbox" name="checkbox" id="checkbox-filter" ).filter__checkboxes-input 
+                label(for="checkbox-filter").filter__checkboxes-label Принемаю условия проекта 
+            .filter__btns 
+                button(type="button").filter__btn.first Разместить заказ 
+                button(type="button").filter__btn В черновик
+

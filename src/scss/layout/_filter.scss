@@ -1,0 +1,250 @@
+.filter{
+    padding-bottom: 70px;
+    @include media(768){
+        padding-bottom: 40px;
+    }
+    &__title{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+        margin-bottom: 20px;
+        @include media(768){
+            font-size: 19px;
+            line-height: 20px;
+        }
+    }
+    &__desc{
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 16px;
+        color: #000000;
+        margin-bottom: 50px;
+    }
+    &__row{
+        background: #FFFFFF;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        column-gap: 18px;
+        padding: 20px 40px 30px 15px;
+        margin-bottom: 40px;
+        @include media(992){
+            flex-wrap: wrap;
+            row-gap: 18px;
+        }
+        @include media(768){
+            padding: 20px 15px 30px 15px;
+        }
+    }
+    &__item{
+        width: calc(25% - 13.5px);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 15px;
+        background: #F8F8F8;
+        border-radius: 8px;
+        padding: 12px;
+        @include media(992){
+            width: calc(50% - 9px);
+        }
+        @include media(575){
+            width: 100%;
+        }
+    }
+    &__img{
+        @include media(768){
+            min-width: 45px;
+            width: 45px;
+        }
+        img{
+            width: 100%;
+        }
+    }
+    &__subtitle{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.5px;
+        color: #2D2D2D;
+        margin-bottom: 6px;
+    }
+    &__a{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.5px;
+        color: #72777B;
+    }
+    &__form{
+        background: #FFFFFF;
+        border-radius: 8px;
+        padding: 26px 33px 60px 20px;
+        margin-bottom: 40px;
+        @include media(768){
+            padding: 26px 20px 60px;
+        }
+        &-title{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+            margin-bottom: 15px;
+        }
+    }
+    &__input{
+        width: 100%;
+        background: #F0F0F0;
+        outline: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 41px;
+        padding: 0 10px;    
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+        &.mb{
+            margin-bottom: 32px;
+        }
+    }
+    &__textarea{
+        width: 100%;
+        background: #F0F0F0;
+        outline: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px;    
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+        margin-bottom: 15px;
+        resize: none;
+        height: 116px;
+    }
+    &__inputs{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        column-gap: 47px;
+        @include media(768){
+            column-gap: 30px;
+            width: 100%;
+        }
+        @include media(575){
+            flex-direction: column;
+            row-gap: 20px;
+            align-items: stretch;
+        }
+        &-item{
+            @include media(768){
+                width: calc(50% - 15px);
+            }
+            @include media(575){
+                width: 100%;
+            }
+        }
+    }
+    &__text{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.5px;
+        color: #000000;
+        margin-bottom: 11px;
+    }
+    &__files{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 16px;
+        padding: 12px;
+        background: #FFFFFF;
+        border-radius: 8px;
+        width: max-content;
+        margin-bottom: 45px;
+    }
+    &__checkboxes{
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+        margin-bottom: 15px;
+        &-input{
+            cursor: pointer;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            outline: 0;
+            background-color: #FFFFFF;
+            border-radius: 4px;
+            width: 24px;
+            height: 24px;
+            transition: 100ms;
+            &:checked{
+                border-radius: 3px;
+                width: 24px;
+                height: 24px;
+                transform: scale(1.05);
+                position: relative;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    background: url(../img/checkbox-tick.svg) center / contain no-repeat;
+                    width: 24px;
+                    height: 24px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+    &__btns{
+        display: flex;
+        align-items: stretch;
+        column-gap: 28px;
+        @include media(575){
+            flex-direction: column;
+            row-gap: 18px;
+        }
+    }
+    &__btn{
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        color: #000000;
+        width: 257px;
+        height: 71px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #7AAA67;
+        border-radius: 8px;
+        transition: 300ms ease;
+        @include media(768){
+            height: 48px;
+        }
+        @include media(575){
+            width: 100%;
+        }
+        &:hover{
+            color: #FFFFFF;
+            background: #7AAA67;
+        }
+        &.first{
+            color: #FFFFFF;
+            background: #7AAA67;
+            &:hover{
+                color: #000000;
+                background: transparent;
+            }
+        }
+    }
+}
