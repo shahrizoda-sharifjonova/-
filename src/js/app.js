@@ -31,3 +31,34 @@ menu.addEventListener('click', (e)=>{
     body.classList.toggle('hidden')
     headerRight.classList.toggle('active') 
 })
+
+const button = document.querySelectorAll('.tasks__item-button');
+const content = document.querySelectorAll('.tasks__item-content');
+const item = document.querySelectorAll('.tasks__item');
+const itemClose = document.querySelector('.close-bg');
+
+button.forEach(btn=>{
+  btn.addEventListener('click', (e)=>{
+    item.forEach(tasksItem=>{
+      tasksItem.classList.remove('active')
+    })
+    btn.classList.toggle('active')
+    btn.parentElement.classList.toggle('active')
+  })
+})
+itemClose.addEventListener('click',(e)=>{
+  item.forEach(tasksItem=>{
+    tasksItem.classList.remove('active')
+  })
+  btn.classList.remove('active')
+  btn.parentElement.classList.remove('active')
+})
+
+const checkbox = document.querySelectorAll('.filter__checkboxes-input');
+const price = document.querySelectorAll('.tasks__item-price');
+
+checkbox.forEach(input =>{
+  input.addEventListener('click', (e)=>{
+    input.parentElement.classList.toggle('active')
+  })
+})
