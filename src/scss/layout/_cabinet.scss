@@ -21,7 +21,7 @@
         border-radius: 8px;
         padding: 25px 45px 50px 20px;
         @include media(992){
-            width: max-content;
+            width: 100%;
         }
         @include media(575){
             padding-bottom: 20px;

@@ -2938,9 +2938,7 @@ a {
   }
 
   .cabinet__left {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
+    width: 100%;
   }
 
   .cabinet__btn {
@@ -2963,22 +2961,12 @@ a {
     margin-bottom: 25px;
   }
 
-  .orders__wrapper {
-    overflow-x: auto;
-  }
-
-  .orders__items {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-  }
-
   .orders__row {
     -webkit-column-gap: 12px;
        -moz-column-gap: 12px;
             column-gap: 12px;
-    min-width: 450px !important;
-    width: 450px !important;
+    min-width: 310px !important;
+    width: 310px !important;
   }
 
   .orders__letter {
@@ -2987,6 +2975,10 @@ a {
     min-width: 60px;
     font-size: 24px;
     font-weight: 600;
+  }
+
+  .orders__texts {
+    display: none;
   }
 
   .orders__subtitle {
@@ -3001,8 +2993,8 @@ a {
   }
 
   .orders .order_1 {
-    min-width: 440px;
-    width: 440px;
+    min-width: 300px;
+    width: 300px;
   }
 
   .orders .order_2 {
@@ -3259,6 +3251,21 @@ a {
   .cabinet__item {
     width: 100%;
     padding: 15px;
+  }
+
+  .orders__row {
+    min-width: 200px !important;
+    width: 200px !important;
+  }
+
+  .orders .order_1 {
+    min-width: 190px;
+    width: 190px;
+  }
+
+  .orders .order_2 {
+    min-width: 150px;
+    width: 150px;
   }
 
   .customer__content {
@@ -3620,6 +3627,33 @@ a {
     width: 50px;
   }
 
+  .orders__top {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .orders__content {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .orders__row {
+    min-width: 150px !important;
+    width: 150px !important;
+  }
+
+  .orders .order_1 {
+    min-width: 140px;
+    width: 140px;
+  }
+
+  .orders .order_2 {
+    min-width: 110px;
+    width: 110px;
+  }
+
   .customer__top {
     padding: 8px 11px;
     -webkit-column-gap: 12px;
@@ -3738,5 +3772,22 @@ a {
 
   .footer2__link {
     text-align: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .orders__row {
+    min-width: 110px !important;
+    width: 110px !important;
+  }
+
+  .orders .order_1 {
+    min-width: 100px;
+    width: 100px;
+  }
+
+  .orders .order_2 {
+    min-width: 65px;
+    width: 65px;
   }
 }
