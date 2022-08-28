@@ -12,10 +12,28 @@
     .messages__row{
         margin-bottom: 33px;
     }
+    .orders__top{
+        @include media(768){
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+        @include media(575){
+            padding-right: 12px;
+            padding-left: 12px;
+        }
+    }
     .orders__row{
         @include media(992){
             min-width: 370px!important;
             width: 370px!important;
+        }
+        @include media(768){
+            min-width: 195px!important;
+            width: 195px!important;
+        }
+        @include media(575){
+            min-width: 175px!important;
+            width: 175px!important;
         }
     }
     .orders__p{
@@ -26,9 +44,17 @@
         flex-direction: column !important;
         align-items: flex-start;
         row-gap: 33px;
+        @include media(575){
+            padding-right: 12px;
+            padding-left: 12px;
+        }
         &-row{
             display: flex;
             align-items: center;
+            @include media(768){
+                align-items: flex-start;
+                justify-content: space-between;
+            }
         }
     }
     .order{
@@ -40,8 +66,20 @@
                 width: 500px;
             }
             @include media(992){
-                min-width: 360px;
-                width: 360px;
+                min-width: 355px;
+                width: 355px;
+            }
+            @include media(768){
+                min-width: 195px !important;
+                width: 195px  !important;
+            }
+            @include media(575){
+                min-width: 175px!important;
+                width: 175px!important;
+            }
+            @include media(450){
+                width: 118px !important;
+                min-width: 118px !important;
             }
         }
         &_2{
@@ -55,11 +93,15 @@
                 min-width: 180px;
                 width: 180px;
             }
+            @include media(575){
+                min-width: max-content;
+                width: max-content;
+                margin-right: 20px;
+            }
         }
         &_4{
             @include media(992){
-                min-width: 110px;
-                width: 110px;
+                display: none;
             }
         }
     }
@@ -70,6 +112,11 @@
         column-gap: 12px;
         flex: 1 1 auto;
         width: 100%;
+    }
+    .orders__texts{
+        @include media(768){
+            display: block;
+        }
     }
     &__status{
         font-weight: 300;
@@ -89,9 +136,13 @@
         font-size: 13px;
         line-height: 16px;
         color: #000000;
+        margin-top: 30px;
         @include media(992){
             max-width: 700px;
             width: 100%;
+        }
+        @include media(768){
+            overflow-x: clip;
         }
         span{
             font-weight: 500;
