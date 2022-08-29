@@ -22,6 +22,7 @@
         padding: 25px 45px 50px 20px;
         @include media(992){
             width: 100%;
+            padding-right: 20px;
         }
         @include media(575){
             padding-bottom: 20px;
@@ -63,9 +64,6 @@
         background: #7AAA67;
         border-radius: 4px;
         transition: 300ms ease;
-        @include media(992){
-            width: max-content;
-        }
         &:hover{
             background: lighten($color: #7AAA67, $amount: 6);
         }

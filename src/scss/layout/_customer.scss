@@ -78,8 +78,8 @@
                 width: 175px!important;
             }
             @include media(450){
-                width: 118px !important;
-                min-width: 118px !important;
+                width: 90px!important;
+                min-width: 90px!important;
             }
         }
         &_2{
@@ -112,11 +112,6 @@
         column-gap: 12px;
         flex: 1 1 auto;
         width: 100%;
-    }
-    .orders__texts{
-        @include media(768){
-            display: block;
-        }
     }
     &__status{
         font-weight: 300;
@@ -324,5 +319,8 @@
                 background: #D9D9D9;
             }
         }
+    }
+    .orders__line{
+        width: 100%;
     }
 }
