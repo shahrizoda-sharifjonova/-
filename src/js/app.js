@@ -32,6 +32,28 @@ menu.addEventListener('click', (e)=>{
     headerRight.classList.toggle('active') 
 })
 
+const headerIcon = document.querySelectorAll('.header__icon');
+const headerIconContent = document.querySelectorAll('.header__icon-content');
+const headerIconClose = document.querySelector('.header__icon-close');
+
+headerIcon.forEach(icon=>{
+    icon.addEventListener('click', (e)=>{
+        headerIconContent.forEach(contents=>{
+            contents.classList.remove('active')
+        })
+        const content = icon.querySelector('.header__icon-content')
+        content.classList.toggle('active')
+        headerIconClose.classList.toggle('active')
+    })
+})
+
+headerIconClose.addEventListener('click', (e)=>{
+    headerIconContent.forEach(contents=>{
+        contents.classList.remove('active')
+    })
+    headerIconClose.classList.remove('active')
+})
+
 const button = document.querySelectorAll('.tasks__item-button');
 const content = document.querySelectorAll('.tasks__item-content');
 const item = document.querySelectorAll('.tasks__item');
